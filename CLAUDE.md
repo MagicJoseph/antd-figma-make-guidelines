@@ -10,7 +10,7 @@ This is a documentation-only repository containing structured guidelines for AI 
 
 Two parallel guideline sets exist:
 
-- `guidelines/` — AntD v6 with default `@ant-design/icons`
+- `guidelines/` — AntD v6 with default `@ant-design/icons` + **i18n** (i18next/react-i18next)
 - `guidelines-phosphor/` — AntD v6 with **Phosphor Icons** + **i18n** (i18next/react-i18next)
 
 Both share common structure:
@@ -18,8 +18,6 @@ Both share common structure:
 - `overview-components.md` / `overview-icons.md` — component catalog and icon usage
 - `design-tokens/` — three-layer token system (Seed → Map → Alias), colors, typography, spacing
 - `components/` — per-component guidelines (26 components) with API tables, examples, and usage rules
-
-The Phosphor variant additionally includes:
 - `i18n/` — internationalization guidelines with i18next namespace system and AntD locale integration
 
 The `examples/` directory contains a sample guideline set (for a fictional "FPL" design system) used as reference for the format.
@@ -50,14 +48,14 @@ The `guidelines-phosphor/` variant replaces `@ant-design/icons` with `@phosphor-
 - Icons have a `weight` prop (`regular`, `bold`, `fill`, `thin`, `light`, `duotone`) instead of Outlined/Filled/TwoTone naming
 - The `overview-icons.md` file contains the full AntD-to-Phosphor icon mapping table
 
-## i18n Guidelines (Phosphor variant only)
+## i18n Guidelines (both variants)
 
-The `guidelines-phosphor/i18n/` directory contains internationalization guidelines using i18next + react-i18next:
+Both `guidelines/i18n/` and `guidelines-phosphor/i18n/` directories contain internationalization guidelines using i18next + react-i18next:
 - Namespace-based translation system: `common`, `forms`, `errors`, `components`, plus feature-specific namespaces (e.g. `dashboard`, `settings`)
 - All user-facing text must use `t('namespace:key')` — no hardcoded strings
 - AntD locale integration via `ConfigProvider` with `locale` prop
 - Supported languages: EN, PL, CS (with instructions for adding more)
-- The `Guidelines.md` in the Phosphor variant includes i18n as a required reading step and code generation rules
+- The `Guidelines.md` in both variants includes i18n as a required reading step and code generation rules
 
 ## Editing Guidelines
 

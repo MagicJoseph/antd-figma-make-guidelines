@@ -9,19 +9,20 @@ This repository contains structured guidelines that teach AI code generators (li
 - **Component guidelines** – usage patterns, API reference, and examples for 26 AntD components
 - **Design tokens** – color system, typography, spacing, and the three-layer token system (Seed, Map, Alias)
 - **Phosphor Icons variant** – alternative guidelines using Phosphor Icons instead of default AntD icons
-- **i18n guidelines** – internationalization with i18next/react-i18next, namespace structure, and AntD integration (Phosphor variant)
+- **i18n guidelines** – internationalization with i18next/react-i18next, namespace structure, and AntD integration
 
 ## Structure
 
 ```
 ├── guidelines/                  # AntD v6 with default @ant-design/icons
-│   ├── Guidelines.md            # Main entry point
+│   ├── Guidelines.md            # Main entry point (includes i18n rules)
 │   ├── overview-components.md   # Component categories and best practices
 │   ├── overview-icons.md        # Icon usage guide
 │   ├── components/              # Per-component guidelines (26 files)
-│   └── design-tokens/           # Colors, typography, spacing, overview
+│   ├── design-tokens/           # Colors, typography, spacing, overview
+│   └── i18n/                    # Internationalization guidelines (i18next)
 │
-├── guidelines-phosphor/         # AntD v6 with Phosphor Icons + i18n
+├── guidelines-phosphor/         # AntD v6 with Phosphor Icons
 │   ├── Guidelines.md            # Entry point (includes Phosphor setup + i18n rules)
 │   ├── overview-components.md   # Component categories and best practices
 │   ├── overview-icons.md        # Phosphor Icons integration and AntD mapping
@@ -48,7 +49,10 @@ This repository contains structured guidelines that teach AI code generators (li
 The `guidelines-phosphor/` variant extends the base guidelines with:
 
 - **Phosphor Icons** (`@phosphor-icons/react`) – replaces `@ant-design/icons` with a `createPhosphorIcon` bridge utility; icons use `weight` prop (`regular`, `bold`, `fill`, `thin`, `light`, `duotone`) instead of Outlined/Filled/TwoTone naming
-- **i18n with i18next** – namespace-based translation system (`common`, `forms`, `errors`, `components`, plus feature namespaces), with AntD locale integration via `ConfigProvider`; supports EN, PL, CS out of the box
+
+## i18n (both variants)
+
+Both `guidelines/` and `guidelines-phosphor/` include **i18n with i18next** – namespace-based translation system (`common`, `forms`, `errors`, `components`, plus feature namespaces), with AntD locale integration via `ConfigProvider`; supports EN, PL, CS out of the box
 
 ## Key AntD v6 Rules
 
